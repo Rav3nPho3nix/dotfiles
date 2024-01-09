@@ -122,7 +122,7 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 21,
         "spacing": 10
     },
     "clock": {
@@ -171,12 +171,15 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        //"format-wifi": "{essid} ({signalStrength}%) ",
         "format-wifi": "",
         "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        //"tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format": "{essid}",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "⚠"
+        //"format-disconnected": "⚠"
+        "format-disconnected": "󰅝",
+        "on-click": "./.config/hypr/scripts/wifiMenu.sh"
         //"format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
@@ -215,18 +218,21 @@
     },
     "custom/wlogout":{
         "format": "",
-        "on-click": "wlogout"
+        "on-click": "wlogout",
+        "tooltip": false
     },
     "custom/apps": {
         "format": "",
-        "on-click": "rofi -show drun"
+        "on-click": "rofi -show drun",
+        "tooltip": false
     },
     "custom/updater":{
         "format": " {}",
         "exec": "checkupdates | wc -l",
         "exec-if": "[[ $(checkupdates | wc -l) ]]",
         "interval": 15,
-        "on-click": "alacritty --class '==pkgupdate' -e sudo pacman -Syu ; pkill -SIGRTMIN+8 waybar"
+        "on-click": "alacritty --class '==pkgupdate' -e sudo pacman -Syu ; pkill -SIGRTMIN+8 waybar",
+        "tooltip": false
     },
     "custom/separator#dot": {
         "format": "",
@@ -258,3 +264,4 @@
         "tooltip": false
     }
 }
+
