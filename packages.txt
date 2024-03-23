@@ -1,0 +1,11 @@
+hyprland
+rofi
+fuzzel
+waybar
+code
+neofetch
+firefox
+networkmanager
+pipewire
+ttf-firacode-nerd
+
