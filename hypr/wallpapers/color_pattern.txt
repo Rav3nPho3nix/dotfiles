@@ -1,0 +1,5 @@
+#35241C (noir)
+#E25128 (orange)
+#8B1209 (rouge)
+#7E6B69 (gris fonce)
+#9B8484 (gris clair)
